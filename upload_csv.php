@@ -13,7 +13,6 @@ if (isset($_POST['upload_csv'])) {
         $file = $_FILES['csv_file']['tmp_name'];
         $handle = fopen($file, "r");
 
-        // Skip the header row
         fgetcsv($handle, 1000, ",");
 
         // Loop through each row of the CSV file
